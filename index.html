@@ -463,6 +463,33 @@ em { color: var(--accent); font-style: italic; }
   .external-lecture-cta .btn{width:100%}
 }
 
+
+/* Seminar portfolio additions — external lecture enquiries */
+.selected-seminars { margin-top:72px; padding-top:54px; border-top:1px solid rgba(34,33,30,.18); scroll-margin-top:100px; }
+.selected-seminars-head { display:grid; grid-template-columns:.75fr 1.25fr; gap:72px; align-items:end; margin-bottom:28px; }
+.selected-seminars-head h3 { margin:0; font-family:var(--serif); font-size:clamp(30px,3.4vw,46px); font-weight:400; line-height:1.12; }
+.selected-seminars-head p:last-child { margin:0; color:var(--muted); line-height:1.8; }
+.selected-seminars-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+.selected-seminar-card { border:1px solid rgba(34,33,30,.14); background:rgba(255,255,255,.22); padding:28px; min-height:210px; display:flex; flex-direction:column; }
+.selected-seminar-card .seminar-meta { display:flex; justify-content:space-between; gap:18px; color:var(--muted); font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
+.selected-seminar-card h4 { margin:auto 0 10px; font-family:var(--serif); font-size:27px; font-weight:400; line-height:1.25; }
+.selected-seminar-card p { margin:0; color:var(--muted); font-size:14px; line-height:1.7; }
+.seminar-originals { margin-top:28px; display:grid; grid-template-columns:.72fr 1.28fr; gap:34px; align-items:center; padding:30px; border:1px solid rgba(34,33,30,.14); background:rgba(255,255,255,.18); }
+.seminar-originals h4 { margin:7px 0 12px; font-family:var(--serif); font-size:28px; font-weight:400; }
+.seminar-originals p { margin:0; color:var(--muted); font-size:13px; line-height:1.8; }
+.seminar-originals figure { margin:0; overflow:hidden; border:1px solid rgba(34,33,30,.12); background:#1e1e1e; }
+.seminar-originals img { width:100%; height:auto; display:block; }
+.external-lecture-cta .enquiry-note { margin-top:10px !important; font-size:12px !important; color:#bfc4bf !important; }
+@media (max-width:980px){
+  .selected-seminars-head,.seminar-originals{grid-template-columns:1fr;gap:24px}
+}
+@media (max-width:620px){
+  .selected-seminars{margin-top:58px;padding-top:46px}
+  .selected-seminars-grid{grid-template-columns:1fr}
+  .selected-seminar-card{min-height:190px;padding:24px}
+  .seminar-originals{padding:20px}
+}
+
 </style>
 </head>
 <body>
@@ -483,9 +510,10 @@ em { color: var(--accent); font-style: italic; }
       </div>
       <a href="#consultation">Consultation</a>
       <div class="nav-dropdown">
-        <a href="#educators" aria-haspopup="true">For Educators ▾</a>
+        <a href="#educators" aria-haspopup="true">Seminars ▾</a>
         <div class="nav-dropdown-menu" role="menu">
           <a href="#educators" role="menuitem">강의 주제</a>
+          <a href="#previous-seminars" role="menuitem">Previous Seminars</a>
           <a href="#seminar-feedback" role="menuitem">세미나 후기</a>
           <a href="#contact" role="menuitem">외부강의 문의</a>
         </div>
@@ -1016,8 +1044,8 @@ em { color: var(--accent); font-style: italic; }
       <div class="section-shell">
         <div class="educator-intro reveal">
           <div>
-            <p class="eyebrow">FOR EDUCATORS</p>
-            <h2>교사교육과 외부 강의도<br><em>진행합니다.</em></h2>
+            <p class="eyebrow">SEMINARS &amp; PROFESSIONAL DEVELOPMENT</p>
+            <h2>교사교육과 외부 강의를<br><em>진행합니다.</em></h2>
           </div>
           <p>언어교육 연구와 17년의 교육 경험, 7년의 온라인 수업 설계·운영 경험을 바탕으로 교사와 교육기관을 위한 강의 및 워크숍을 진행해왔습니다. 이론을 소개하는 데 그치지 않고, 현장에서 바로 적용할 수 있는 수업 설계와 운영의 원리를 함께 나눕니다.</p>
         </div>
@@ -1025,17 +1053,17 @@ em { color: var(--accent); font-style: italic; }
         <div class="educator-grid">
           <article class="educator-card reveal">
             <span class="num">01</span>
-            <h3>Reading & Literacy</h3>
+            <h3>Language &amp; Literacy Education</h3>
             <p>파닉스와 decoding에서 읽기 유창성, 독해와 문해력으로 이어지는 발달을 이해하고 실제 수업에 적용하는 방법을 다룹니다.</p>
           </article>
           <article class="educator-card reveal delay-1">
             <span class="num">02</span>
-            <h3>Teaching & Digital Pedagogy</h3>
+            <h3>Teaching &amp; Digital Pedagogy</h3>
             <p>학습자의 참여를 이끌어내는 수업 설계, 디지털 도구의 교육적 활용, 온라인에서도 깊이 있는 학습을 만드는 방법을 나눕니다.</p>
           </article>
           <article class="educator-card reveal delay-2">
             <span class="num">03</span>
-            <h3>Online Teaching & Programme Management</h3>
+            <h3>Education Practice &amp; Programme Development</h3>
             <p>온라인 수업의 설계와 학습관리 시스템, 학생·학부모 커뮤니케이션, 교육 프로그램 운영 전략을 실제 사례와 함께 다룹니다.</p>
           </article>
         </div>
@@ -1043,11 +1071,29 @@ em { color: var(--accent); font-style: italic; }
         <div class="seminar-topics reveal">
           <p class="small-label">AVAILABLE FORMATS</p>
           <div class="seminar-topic-chips" aria-label="외부강의 형태">
-            <span>Teacher Training</span>
-            <span>Guest Lecture</span>
-            <span>Workshop</span>
-            <span>Education Seminar</span>
-            <span>Online / In-person</span>
+            <span>Teacher Training</span><span>Guest Lecture</span><span>Workshop</span><span>Education Seminar</span><span>Online / In-person</span>
+          </div>
+        </div>
+
+        <div id="previous-seminars" class="selected-seminars">
+          <div class="selected-seminars-head reveal">
+            <div>
+              <p class="eyebrow">SELECTED SEMINARS</p>
+              <h3>현장의 질문에서 출발한<br><em>강의와 연수.</em></h3>
+            </div>
+            <p>영어교육자와 교육기관 운영자, 한글학교 교사 등 교육 현장의 다양한 청중을 대상으로 수업 설계와 문해력, 온라인 교육 운영을 주제로 강의해왔습니다.</p>
+          </div>
+          <div class="selected-seminars-grid">
+            <article class="selected-seminar-card reveal">
+              <div class="seminar-meta"><span>2022</span><span>KESA</span></div>
+              <h4>Online Teaching &amp; Academy Management Seminar</h4>
+              <p>온라인 수업 설계, 학습관리, 디지털 도구 활용, 학생·학부모 커뮤니케이션과 교육 프로그램 운영을 다룬 영어교육자 대상 세미나.</p>
+            </article>
+            <article class="selected-seminar-card reveal delay-1">
+              <div class="seminar-meta"><span>2026</span><span>UK Korean School Teacher Training</span></div>
+              <h4>문해력 교육 사례 발표</h4>
+              <p>재영 런던 한글학교 연합 연수에서 읽기와 문해력 교육의 실제 적용 사례를 중심으로 진행한 교사 연수 발표.</p>
+            </article>
           </div>
         </div>
 
@@ -1058,14 +1104,14 @@ em { color: var(--accent); font-style: italic; }
               <h3>세미나를 들은 교육자들의<br><em>이야기.</em></h3>
             </div>
             <div>
-              <p>교사·원장 및 영어교육 관계자를 대상으로 진행한 세미나에서 받은 후기 중, 강의의 전문성과 현장 적용성을 잘 보여주는 내용을 선별했습니다.</p>
+              <p>교사·원장 및 영어교육 관계자를 대상으로 진행한 세미나에서 받은 후기 중, 강의의 전문성·현장 적용성·몰입도를 서로 다른 관점에서 보여주는 내용을 선별했습니다.</p>
               <p class="seminar-feedback-note">* 참가자 후기 원문에서 개인정보를 제외하고 일부 표현을 발췌·축약했습니다.</p>
             </div>
           </div>
 
           <div class="seminar-feedback-grid">
             <article class="seminar-feedback-card reveal">
-              <span class="feedback-kicker">01 · CONTENT</span>
+              <span class="feedback-kicker">01 · EXPERTISE</span>
               <blockquote>“메모해왔던 질문들은 세미나를 들을수록 자연스럽게 해결됐고, 끝나고 나니 더 공부해보고 싶다는 마음이 생겼습니다.”</blockquote>
               <footer>교육자 세미나 참가자</footer>
             </article>
@@ -1081,7 +1127,7 @@ em { color: var(--accent); font-style: italic; }
             </article>
             <article class="seminar-feedback-card reveal">
               <span class="feedback-kicker">04 · MANAGEMENT</span>
-              <blockquote>“수업시간 분배부터 시간표 운영, 학생 관리와 학부모 소통까지 온라인 수업을 하나의 시스템으로 보는 관점을 얻었습니다.”</blockquote>
+              <blockquote>“수업시간 분배부터 시간표 운영, 학생 관리와 학부모 소통까지 1분 1초를 낭비하지 않는 촘촘한 관리가 인상적이었습니다.”</blockquote>
               <footer>교육기관 운영자 · 세미나 참가자</footer>
             </article>
             <article class="seminar-feedback-card reveal delay-1">
@@ -1099,13 +1145,19 @@ em { color: var(--accent); font-style: italic; }
           <div class="seminar-proof reveal">
             <p class="small-label">WHAT PARTICIPANTS VALUED</p>
             <div class="seminar-proof-list">
-              <span>현장 적용성</span>
-              <span>구체적인 사례</span>
-              <span>온라인 수업 설계</span>
-              <span>디지털 도구 활용</span>
-              <span>학습관리 시스템</span>
-              <span>학생·학부모 소통</span>
+              <span>현장 적용성</span><span>구체적인 사례</span><span>온라인 수업 설계</span><span>디지털 도구 활용</span><span>학습관리 시스템</span><span>학생·학부모 소통</span>
             </div>
+          </div>
+
+          <div class="seminar-originals reveal">
+            <div>
+              <p class="small-label">REAL PARTICIPANT FEEDBACK</p>
+              <h4>실제 참가자 후기</h4>
+              <p>당시 참가자들이 남긴 후기 중 일부입니다. 홈페이지에는 개인 식별 정보가 보이지 않도록 게시물 본문 영역만 선별해 구성했습니다.</p>
+            </div>
+            <figure>
+              <img src="seminar-feedback-collage.jpg" alt="Vivian English 세미나 참가자 후기 원문 일부를 모은 콜라주" loading="lazy">
+            </figure>
           </div>
         </div>
 
@@ -1113,9 +1165,10 @@ em { color: var(--accent); font-style: italic; }
           <div>
             <p class="small-label">INVITE VIVIAN TO SPEAK</p>
             <h3>학교·교육기관·교사 커뮤니티를 위한<br>맞춤 강의와 워크숍을 진행합니다.</h3>
-            <p>대상과 목적에 맞춰 literacy, reading instruction, digital pedagogy, online teaching 및 교육 프로그램 운영 주제를 구성할 수 있습니다.</p>
+            <p>대상과 목적에 맞춰 literacy, reading instruction, language education, digital pedagogy, online teaching 및 교육 프로그램 운영 주제를 구성할 수 있습니다.</p>
+            <p class="enquiry-note">문의 시 기관명 · 강의 대상 · 예상 인원 · 희망 주제 · 희망 날짜 · 온라인/오프라인 여부를 함께 보내주시면 보다 빠르게 안내드릴 수 있습니다.</p>
           </div>
-          <a class="btn primary" href="#contact">외부강의 문의하기</a>
+          <a class="btn primary" href="mailto:vivianenglish.vivian@gmail.com?subject=%EC%99%B8%EB%B6%80%EA%B0%95%EC%9D%98%20%EB%B0%8F%20%EC%9B%8C%ED%81%AC%EC%88%8D%20%EB%AC%B8%EC%9D%98">외부강의 문의하기</a>
         </div>
       </div>
     </section>
@@ -1294,7 +1347,7 @@ em { color: var(--accent); font-style: italic; }
           <div class="contact-row"><strong>Email</strong><p><a href="mailto:vivianenglish.vivian@gmail.com">vivianenglish.vivian@gmail.com</a></p></div>
           <div class="contact-row"><strong>Class Forms</strong><p>각 수업의 신청 버튼을 통해 신청서를 남겨주세요.</p></div>
           <div class="contact-row"><strong>1:1 Enquiry</strong><p>프리미엄 1:1 수업은 KakaoTalk으로 개별 문의해주세요.</p></div>
-          <div class="contact-row"><strong>Educator Training</strong><p>교사교육 및 외부강의 문의를 받습니다.</p></div>
+          <div class="contact-row"><strong>Educator Training</strong><p><a href="mailto:vivianenglish.vivian@gmail.com?subject=%EC%99%B8%EB%B6%80%EA%B0%95%EC%9D%98%20%EB%B0%8F%20%EC%9B%8C%ED%81%AC%EC%88%8D%20%EB%AC%B8%EC%9D%98">교사교육 · 세미나 · 워크숍 · 외부강의 문의</a></p></div>
           <div class="contact-row"><strong>Research</strong><p>학술 활동 및 연구 협업 관련 문의를 받습니다.</p></div>
         </div>
       </div>
