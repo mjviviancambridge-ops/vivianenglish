@@ -198,7 +198,22 @@
       .exposure-points{grid-template-columns:1fr}
     }
 
-  </style>
+  
+/* Mobile navigation visibility fix */
+@media (max-width: 920px) {
+  .nav-toggle {
+    display: block !important;
+    position: relative;
+    z-index: 50;
+    font-size: 24px;
+    color: var(--ink);
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+  }
+}
+
+</style>
 </head>
 <body>
   <header class="topbar">
