@@ -490,9 +490,31 @@ em { color: var(--accent); font-style: italic; }
   .seminar-originals{padding:20px}
 }
 
+
+
+/* Explore My Work — connects Vivian English with academic research and Ko-read */
+.about-work-links { margin-top:22px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; line-height:1.8; }
+.about-work-links a { color:var(--ink); text-decoration:none; border-bottom:1px solid rgba(34,33,30,.35); transition:border-color .2s ease; }
+.about-work-links a:hover { border-bottom-color:var(--accent); }
+.explore-work-section { padding:96px 0; }
+.explore-work-head { display:grid; grid-template-columns:.8fr 1.2fr; gap:72px; align-items:end; margin-bottom:34px; }
+.explore-work-head h2 { margin:0; font-family:var(--serif); font-size:clamp(38px,4.6vw,64px); font-weight:500; line-height:1.02; letter-spacing:-.03em; }
+.explore-work-head .explore-intro { margin:0; max-width:620px; color:var(--muted); font-size:15px; line-height:1.8; }
+.explore-work-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.work-link-card { min-height:285px; border:1px solid rgba(34,33,30,.14); background:rgba(255,255,255,.28); padding:32px; color:var(--ink); text-decoration:none; display:flex; flex-direction:column; justify-content:space-between; transition:transform .2s ease, background .2s ease, border-color .2s ease; }
+.work-link-card:hover { transform:translateY(-3px); background:rgba(255,255,255,.58); border-color:rgba(34,33,30,.26); }
+.work-link-card h3 { margin:28px 0 12px; font-family:var(--serif); font-size:clamp(30px,3vw,42px); font-weight:500; letter-spacing:-.025em; }
+.work-link-card p:not(.small-label) { margin:0; max-width:520px; color:var(--muted); font-size:14px; line-height:1.75; }
+.work-link-card .work-card-link { margin-top:32px; font-size:12px; font-weight:700; letter-spacing:.04em; }
+.footer-links { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+.footer-links a { color:inherit; text-decoration:none; border-bottom:1px solid transparent; }
+.footer-links a:hover { color:var(--ink); border-bottom-color:var(--ink); }
+@media (max-width:980px){ .explore-work-head{grid-template-columns:1fr;gap:24px}.explore-work-grid{grid-template-columns:1fr} }
+@media (max-width:640px){ .explore-work-section{padding:72px 0}.work-link-card{min-height:235px;padding:24px}.footer-links{gap:10px} }
+
 </style>
 </head>
-<body data-build="seminar-feedback-v4-20260822">
+<body data-build="seminar-feedback-v5-explore-work-20260822">
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Vivian English home">
       <img class="brand-logo" src="data:image/png;base64,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" alt="Vivian English" />
@@ -582,6 +604,10 @@ em { color: var(--accent); font-style: italic; }
           <div><span>07</span><p>Years teaching online</p></div>
           <div><span>01</span><p>Peer-reviewed publication</p></div>
         </div>
+        <p class="about-work-links">
+          연구 활동과 학술 프로필은 <a href="https://mjpark.netlify.app/" target="_blank" rel="noopener noreferrer">Mijung Park Research Profile ↗</a>에서,
+          한국어 계승어·문해력 연구와 실천 프로젝트는 <a href="https://ko-read.netlify.app/" target="_blank" rel="noopener noreferrer">Ko-read ↗</a>에서 더 자세히 볼 수 있습니다.
+        </p>
       </div>
     </section>
 
@@ -1335,6 +1361,37 @@ em { color: var(--accent); font-style: italic; }
     </section>
 
 
+
+    <section id="explore-work" class="explore-work-section band-light">
+      <div class="section-shell">
+        <div class="explore-work-head reveal">
+          <div>
+            <p class="eyebrow">RESEARCH &amp; PRACTICE</p>
+            <h2>Explore My Work</h2>
+          </div>
+          <p class="explore-intro">Vivian English의 교육 실천은 연구와 다른 프로젝트로 이어집니다. 언어교육 연구와 Ko-read의 heritage language &amp; literacy work를 함께 살펴보세요.</p>
+        </div>
+        <div class="explore-work-grid">
+          <a class="work-link-card reveal" href="https://mjpark.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Mijung Park academic research profile">
+            <div>
+              <p class="small-label">ACADEMIC RESEARCH &amp; PROFILE</p>
+              <h3>Mijung Park</h3>
+              <p>Language education, multilingual learners, digital media and literacy — publications, presentations and academic work.</p>
+            </div>
+            <span class="work-card-link">View Academic Profile ↗</span>
+          </a>
+          <a class="work-link-card reveal delay-1" href="https://ko-read.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Visit Ko-read heritage language and literacy project">
+            <div>
+              <p class="small-label">HERITAGE LANGUAGE &amp; LITERACY</p>
+              <h3>Ko-read</h3>
+              <p>Research-informed Korean heritage language and literacy practice connecting research, programme development and educational practice.</p>
+            </div>
+            <span class="work-card-link">Visit Ko-read ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="contact-section">
       <div class="section-shell contact-grid">
         <div class="reveal">
@@ -1369,7 +1426,11 @@ em { color: var(--accent); font-style: italic; }
 
   <footer class="footer">
     <p>© 2026 Vivian English</p>
-    <p>Teaching · Research · Consultation</p>
+    <div class="footer-links" aria-label="Related websites">
+      <span>Teaching · Research · Consultation</span>
+      <a href="https://mjpark.netlify.app/" target="_blank" rel="noopener noreferrer">Research Profile ↗</a>
+      <a href="https://ko-read.netlify.app/" target="_blank" rel="noopener noreferrer">Ko-read ↗</a>
+    </div>
   </footer>
 
   <script>

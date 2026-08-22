@@ -1,2 +1,8 @@
-Vivian English seminar feedback build v4
-Contains: Seminars nav, Selected Seminars, Seminar Feedback, participant collage, Invite Vivian to Speak.
+Vivian English V5 — Explore My Work update
+Includes:
+- Seminar feedback V4 content retained
+- About links to Mijung Park Research Profile and Ko-read
+- Explore My Work section near the bottom
+- Footer links to both related sites
+Research profile: https://mjpark.netlify.app/
+Ko-read: https://ko-read.netlify.app/
