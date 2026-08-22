@@ -424,6 +424,45 @@ em { color: var(--accent); font-style: italic; }
 .feature-readmore { display:inline-flex; align-items:center; gap:10px; margin-top:22px; font-size:13px; letter-spacing:.08em; text-transform:uppercase; }
 .insight-card-link { color:inherit; text-decoration:none; display:block; }
 
+
+/* Seminar feedback for educator / external lecture enquiries */
+.seminar-topics { margin-top:28px; padding:22px 0 4px; }
+.seminar-topic-chips { display:flex; flex-wrap:wrap; gap:8px; }
+.seminar-topic-chips span { border:1px solid rgba(34,33,30,.18); border-radius:999px; padding:8px 12px; background:rgba(255,255,255,.22); font-size:11px; font-weight:700; letter-spacing:.02em; }
+
+.seminar-feedback { margin-top:74px; padding-top:58px; border-top:1px solid rgba(34,33,30,.18); scroll-margin-top:100px; }
+.seminar-feedback-head { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:end; }
+.seminar-feedback-head h3 { margin:0; font-family:var(--serif); font-size:clamp(34px,4.1vw,56px); line-height:1.05; font-weight:400; letter-spacing:-.03em; }
+.seminar-feedback-head > div:last-child > p:first-child { margin:0; color:var(--muted); line-height:1.8; }
+.seminar-feedback-note { margin:12px 0 0; color:var(--muted); font-size:12px; line-height:1.7; }
+.seminar-feedback-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:36px; }
+.seminar-feedback-card { min-height:285px; background:rgba(255,253,249,.72); border:1px solid rgba(34,33,30,.1); padding:26px 24px; display:flex; flex-direction:column; }
+.feedback-kicker { display:block; color:var(--accent); font-size:10px; font-weight:800; letter-spacing:.14em; }
+.seminar-feedback-card blockquote { margin:auto 0 20px; font-family:var(--serif); font-size:20px; line-height:1.65; font-weight:400; letter-spacing:-.02em; }
+.seminar-feedback-card footer { color:var(--muted); font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
+.seminar-proof { margin-top:18px; padding:24px 26px; border:1px solid rgba(34,33,30,.14); background:rgba(255,255,255,.22); }
+.seminar-proof-list { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+.seminar-proof-list span { padding:7px 10px; border-bottom:1px solid var(--accent); font-size:12px; }
+.external-lecture-cta { margin-top:36px; padding:34px 36px; background:var(--deep); color:var(--white); display:flex; align-items:flex-end; justify-content:space-between; gap:40px; }
+.external-lecture-cta .small-label { color:#d7b99d; }
+.external-lecture-cta h3 { margin:6px 0 12px; font-family:var(--serif); font-size:clamp(26px,3vw,38px); font-weight:400; line-height:1.2; }
+.external-lecture-cta p:last-child { margin:0; max-width:720px; color:#d0d2ce; font-size:14px; }
+.external-lecture-cta .btn { flex:0 0 auto; background:var(--white); color:var(--deep); border-color:var(--white); }
+
+@media (max-width:980px){
+  .seminar-feedback-head{grid-template-columns:1fr;gap:24px}
+  .seminar-feedback-grid{grid-template-columns:1fr 1fr}
+  .external-lecture-cta{align-items:flex-start;flex-direction:column}
+}
+@media (max-width:620px){
+  .seminar-feedback{margin-top:58px;padding-top:46px}
+  .seminar-feedback-grid{grid-template-columns:1fr}
+  .seminar-feedback-card{min-height:240px}
+  .seminar-feedback-card blockquote{font-size:19px}
+  .external-lecture-cta{padding:28px 24px}
+  .external-lecture-cta .btn{width:100%}
+}
+
 </style>
 </head>
 <body>
@@ -443,7 +482,14 @@ em { color: var(--accent); font-style: italic; }
         </div>
       </div>
       <a href="#consultation">Consultation</a>
-      <a href="#educators">For Educators</a>
+      <div class="nav-dropdown">
+        <a href="#educators" aria-haspopup="true">For Educators ▾</a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="#educators" role="menuitem">강의 주제</a>
+          <a href="#seminar-feedback" role="menuitem">세미나 후기</a>
+          <a href="#contact" role="menuitem">외부강의 문의</a>
+        </div>
+      </div>
       <a href="#research">Research</a>
       <a href="#insights">Insights</a>
       <a href="#contact">Contact</a>
@@ -973,26 +1019,104 @@ em { color: var(--accent); font-style: italic; }
             <p class="eyebrow">FOR EDUCATORS</p>
             <h2>교사교육과 외부 강의도<br><em>진행합니다.</em></h2>
           </div>
-          <p>언어교육 연구와 17년의 교육 경험, 7년의 온라인 수업 설계·운영 경험을 바탕으로 교사와 교육기관을 위한 강의 및 워크숍을 진행해왔습니다.</p>
+          <p>언어교육 연구와 17년의 교육 경험, 7년의 온라인 수업 설계·운영 경험을 바탕으로 교사와 교육기관을 위한 강의 및 워크숍을 진행해왔습니다. 이론을 소개하는 데 그치지 않고, 현장에서 바로 적용할 수 있는 수업 설계와 운영의 원리를 함께 나눕니다.</p>
         </div>
+
         <div class="educator-grid">
           <article class="educator-card reveal">
             <span class="num">01</span>
-            <h3>Reading Fluency</h3>
-            <p>읽기 유창성의 핵심 요소를 이해하고, 실제 영어수업에서 정확도·속도·표현력을 어떻게 지도할지 다룹니다.</p>
+            <h3>Reading & Literacy</h3>
+            <p>파닉스와 decoding에서 읽기 유창성, 독해와 문해력으로 이어지는 발달을 이해하고 실제 수업에 적용하는 방법을 다룹니다.</p>
           </article>
           <article class="educator-card reveal delay-1">
             <span class="num">02</span>
-            <h3>Pronunciation Teaching</h3>
-            <p>영어의 소리, 강세와 리듬을 이해하고 학습자의 발음을 보다 효과적으로 지도하기 위한 실전 교육입니다.</p>
+            <h3>Teaching & Digital Pedagogy</h3>
+            <p>학습자의 참여를 이끌어내는 수업 설계, 디지털 도구의 교육적 활용, 온라인에서도 깊이 있는 학습을 만드는 방법을 나눕니다.</p>
           </article>
           <article class="educator-card reveal delay-2">
             <span class="num">03</span>
-            <h3>Online Teaching & Academy Management</h3>
-            <p>온라인 수업의 설계, 학습관리 시스템, 학생·학부모 커뮤니케이션과 온라인 기반 학원 운영 전략을 나눕니다.</p>
+            <h3>Online Teaching & Programme Management</h3>
+            <p>온라인 수업의 설계와 학습관리 시스템, 학생·학부모 커뮤니케이션, 교육 프로그램 운영 전략을 실제 사례와 함께 다룹니다.</p>
           </article>
         </div>
-        <div class="educator-cta reveal"><a class="btn secondary" href="#contact">교사교육 · 외부강의 문의</a></div>
+
+        <div class="seminar-topics reveal">
+          <p class="small-label">AVAILABLE FORMATS</p>
+          <div class="seminar-topic-chips" aria-label="외부강의 형태">
+            <span>Teacher Training</span>
+            <span>Guest Lecture</span>
+            <span>Workshop</span>
+            <span>Education Seminar</span>
+            <span>Online / In-person</span>
+          </div>
+        </div>
+
+        <div id="seminar-feedback" class="seminar-feedback">
+          <div class="seminar-feedback-head reveal">
+            <div>
+              <p class="eyebrow">PARTICIPANT FEEDBACK</p>
+              <h3>세미나를 들은 교육자들의<br><em>이야기.</em></h3>
+            </div>
+            <div>
+              <p>교사·원장 및 영어교육 관계자를 대상으로 진행한 세미나에서 받은 후기 중, 강의의 전문성과 현장 적용성을 잘 보여주는 내용을 선별했습니다.</p>
+              <p class="seminar-feedback-note">* 참가자 후기 원문에서 개인정보를 제외하고 일부 표현을 발췌·축약했습니다.</p>
+            </div>
+          </div>
+
+          <div class="seminar-feedback-grid">
+            <article class="seminar-feedback-card reveal">
+              <span class="feedback-kicker">01 · CONTENT</span>
+              <blockquote>“메모해왔던 질문들은 세미나를 들을수록 자연스럽게 해결됐고, 끝나고 나니 더 공부해보고 싶다는 마음이 생겼습니다.”</blockquote>
+              <footer>교육자 세미나 참가자</footer>
+            </article>
+            <article class="seminar-feedback-card reveal delay-1">
+              <span class="feedback-kicker">02 · PERSPECTIVE</span>
+              <blockquote>“온라인과 오프라인의 장단점이 분명한데, 온라인의 단점을 장점으로 바꾸는 방법을 실제 사례와 함께 배울 수 있었습니다.”</blockquote>
+              <footer>교육자 세미나 참가자</footer>
+            </article>
+            <article class="seminar-feedback-card reveal delay-2">
+              <span class="feedback-kicker">03 · APPLICATION</span>
+              <blockquote>“같은 온라인 도구를 사용하고 있었지만 수박 겉핥기였다는 걸 깨달았어요. 수업에 바로 적용할 수 있는 새로운 방법을 알게 됐습니다.”</blockquote>
+              <footer>영어교육자 · 세미나 참가자</footer>
+            </article>
+            <article class="seminar-feedback-card reveal">
+              <span class="feedback-kicker">04 · MANAGEMENT</span>
+              <blockquote>“수업시간 분배부터 시간표 운영, 학생 관리와 학부모 소통까지 온라인 수업을 하나의 시스템으로 보는 관점을 얻었습니다.”</blockquote>
+              <footer>교육기관 운영자 · 세미나 참가자</footer>
+            </article>
+            <article class="seminar-feedback-card reveal delay-1">
+              <span class="feedback-kicker">05 · IMMERSION</span>
+              <blockquote>“긴 세미나인데도 시간이 정말 빠르게 지나갔어요. 실제 운영 경험에서 나온 구체적인 노하우가 특히 인상 깊었습니다.”</blockquote>
+              <footer>교육자 세미나 참가자</footer>
+            </article>
+            <article class="seminar-feedback-card reveal delay-2">
+              <span class="feedback-kicker">06 · IMPACT</span>
+              <blockquote>“나의 색깔을 찾고 거기에 온라인의 강점을 더해보자는 생각이 들었습니다. 바로 시도해보고 싶은 의지가 생겼어요.”</blockquote>
+              <footer>교육자 세미나 참가자</footer>
+            </article>
+          </div>
+
+          <div class="seminar-proof reveal">
+            <p class="small-label">WHAT PARTICIPANTS VALUED</p>
+            <div class="seminar-proof-list">
+              <span>현장 적용성</span>
+              <span>구체적인 사례</span>
+              <span>온라인 수업 설계</span>
+              <span>디지털 도구 활용</span>
+              <span>학습관리 시스템</span>
+              <span>학생·학부모 소통</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="external-lecture-cta reveal">
+          <div>
+            <p class="small-label">INVITE VIVIAN TO SPEAK</p>
+            <h3>학교·교육기관·교사 커뮤니티를 위한<br>맞춤 강의와 워크숍을 진행합니다.</h3>
+            <p>대상과 목적에 맞춰 literacy, reading instruction, digital pedagogy, online teaching 및 교육 프로그램 운영 주제를 구성할 수 있습니다.</p>
+          </div>
+          <a class="btn primary" href="#contact">외부강의 문의하기</a>
+        </div>
       </div>
     </section>
 
