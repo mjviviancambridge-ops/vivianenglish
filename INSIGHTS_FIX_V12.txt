@@ -1,0 +1,2 @@
+Vivian English V12 - Insights link fix
+All 5 insight pages are bundled under /insights/ and homepage links use root-safe absolute paths.
