@@ -7,3 +7,5 @@ Do not rename index.html files or move folders without checking Cloudflare Pages
 Check both desktop and mobile layouts before finishing.
 
 After editing, explain changed files and deployment steps.
+
+If a request conflicts with the existing structure, explain the risk before making changes.
