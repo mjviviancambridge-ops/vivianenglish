@@ -16,3 +16,11 @@ Crisp live chat update
 - Chat widget loads ONLY on /consultancy/
 - Bottom '1:1 문의하기' button opens Crisp chat directly
 - Default Crisp floating chat button remains available
+
+V9 embedded chat fix
+--------------------
+- Replaced the old contact-route behavior.
+- Added an always-visible VELA 1:1 inquiry button at bottom-right.
+- Button opens Crisp inside the VELA page using Crisp's official direct chat embed URL.
+- Bottom CTA '1:1 문의하기' opens the same embedded chat.
+- Messages still go to the same Crisp workspace / Inbox.

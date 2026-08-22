@@ -136,6 +136,47 @@
       .mini-brand{font-size:16px}
       .back{padding-left:15px}
     }
+  
+    /* VELA embedded Crisp chat */
+    .vela-chat-fab{
+      position:fixed;right:22px;bottom:22px;z-index:1000;
+      border:0;border-radius:999px;background:var(--ink);color:var(--white);
+      min-height:54px;padding:0 20px;font:600 13px/1 var(--sans);
+      letter-spacing:.04em;cursor:pointer;
+      box-shadow:0 12px 30px rgba(13,33,55,.18);
+      display:flex;align-items:center;gap:9px;
+    }
+    .vela-chat-fab::before{
+      content:"";width:9px;height:9px;border-radius:50%;
+      background:var(--gold-soft);display:block;
+    }
+    .vela-chat-panel{
+      position:fixed;right:22px;bottom:88px;z-index:1001;
+      width:min(390px,calc(100vw - 28px));height:min(650px,calc(100vh - 120px));
+      background:#fff;border:1px solid var(--line);border-radius:18px;
+      box-shadow:0 24px 70px rgba(13,33,55,.22);overflow:hidden;
+      display:none;
+    }
+    .vela-chat-panel.open{display:flex;flex-direction:column}
+    .vela-chat-head{
+      height:56px;flex:0 0 56px;background:var(--ink);color:#fff;
+      display:flex;align-items:center;justify-content:space-between;padding:0 16px 0 18px;
+    }
+    .vela-chat-head strong{font-family:var(--serif);font-size:16px;font-weight:400;letter-spacing:.04em}
+    .vela-chat-close{
+      border:0;background:transparent;color:#fff;font-size:24px;line-height:1;
+      width:40px;height:40px;cursor:pointer;border-radius:50%;
+    }
+    .vela-chat-close:hover{background:rgba(255,255,255,.08)}
+    .vela-chat-frame{border:0;width:100%;height:100%;background:#fff}
+    @media(max-width:620px){
+      .vela-chat-fab{right:14px;bottom:14px}
+      .vela-chat-panel{
+        right:14px;bottom:78px;width:calc(100vw - 28px);
+        height:min(620px,calc(100vh - 100px));border-radius:16px;
+      }
+    }
+
   </style>
   <!-- Crisp live chat: VELA consultancy only -->
   <script type="text/javascript">
@@ -301,10 +342,10 @@
         <h2 class="fade">아이에게 더 많은 학습보다<br>더 정확한 방향이 필요할 때.</h2>
         <p class="fade">
           현재 컨설팅 및 사전 프로파일 시스템을 준비하고 있습니다.
-          서비스 오픈 전까지 Vivian English를 통해 문의할 수 있습니다.
+          궁금한 점은 아래 1:1 문의를 통해 바로 남겨주세요.
         </p>
         <div class="hero-actions fade">
-          <button class="btn primary" id="open-crisp-chat" type="button">1:1 문의하기</button>
+          <button class="btn primary" id="open-vela-chat" type="button">1:1 문의하기</button>
           <a class="btn secondary" href="https://mjpark.netlify.app/" target="_blank" rel="noopener noreferrer">Research Profile ↗</a>
         </div>
       </div>
@@ -323,14 +364,55 @@
       entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
     },{threshold:.08});
     document.querySelectorAll('.fade').forEach(el=>io.observe(el));
-    const crispButton = document.getElementById('open-crisp-chat');
-    if (crispButton) {
-      crispButton.addEventListener('click', function () {
-        window.$crisp = window.$crisp || [];
-        window.$crisp.push(['do', 'chat:open']);
+
+  
+    const chatPanel = document.getElementById('vela-chat-panel');
+    const chatFab = document.getElementById('vela-chat-fab');
+    const chatClose = document.getElementById('vela-chat-close');
+    const chatCta = document.getElementById('open-vela-chat');
+
+    function openVelaChat() {
+      chatPanel.classList.add('open');
+      chatFab.setAttribute('aria-expanded', 'true');
+    }
+    function closeVelaChat() {
+      chatPanel.classList.remove('open');
+      chatFab.setAttribute('aria-expanded', 'false');
+    }
+
+    chatFab.addEventListener('click', function () {
+      if (chatPanel.classList.contains('open')) closeVelaChat();
+      else openVelaChat();
+    });
+    chatClose.addEventListener('click', closeVelaChat);
+    if (chatCta) {
+      chatCta.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        openVelaChat();
       });
     }
 
   </script>
+
+  <button class="vela-chat-fab" id="vela-chat-fab" type="button" aria-controls="vela-chat-panel" aria-expanded="false">
+    1:1 문의
+  </button>
+
+  <aside class="vela-chat-panel" id="vela-chat-panel" aria-label="VELA 1:1 문의 채팅">
+    <div class="vela-chat-head">
+      <strong>VELA · 1:1 Consultation</strong>
+      <button class="vela-chat-close" id="vela-chat-close" type="button" aria-label="채팅 닫기">×</button>
+    </div>
+    <iframe
+      class="vela-chat-frame"
+      id="vela-chat-frame"
+      title="VELA Crisp live chat"
+      src="https://go.crisp.chat/chat/embed/?website_id=9c506c10-081a-464b-9e35-7557c3dc2968"
+      loading="lazy"
+      allow="clipboard-write">
+    </iframe>
+  </aside>
+
 </body>
 </html>
