@@ -1,8 +1,5 @@
-Vivian English V5 — Explore My Work update
-Includes:
-- Seminar feedback V4 content retained
-- About links to Mijung Park Research Profile and Ko-read
-- Explore My Work section near the bottom
-- Footer links to both related sites
-Research profile: https://mjpark.netlify.app/
-Ko-read: https://ko-read.netlify.app/
+Vivian English V6 — OG preview image update
+- White OG image background
+- Horizontal Vivian English logo resized to match compact reference preview
+- New og-image-v6.jpg filename used in Open Graph/Twitter meta tags to help bypass cached thumbnail assets
+- All V5 seminar feedback and Explore My Work content retained
