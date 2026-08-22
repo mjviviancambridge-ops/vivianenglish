@@ -1,0 +1,154 @@
+# Vivian English Website Project Guide
+
+## Project Overview
+
+This repository contains the official websites for:
+
+1. Vivian English
+- Online English education brand
+- Target: Korean families seeking evidence-informed English education
+- Founder: Vivian Park
+- Cambridge MPhil graduate and PhD researcher in language education
+
+2. VELA Language Learning Lab
+- Evidence-informed language learning consultancy
+- Research-informed parent consultancy
+- Focus:
+  - home language exposure
+  - literacy development
+  - multilingual learning
+  - digital language environments
+
+
+# Brand Identity
+
+## Vivian English
+
+Tone:
+- Warm
+- Professional
+- Academic but approachable
+- Parent-focused
+
+Visual style:
+- Cream / beige background
+- Elegant typography
+- Minimal design
+- Premium education brand feeling
+
+Avoid:
+- Bright colours
+- Cartoon style
+- Overly commercial wording
+
+
+## VELA
+
+Positioning:
+"Evidence-informed research & consultancy"
+
+Tone:
+- Academic
+- Calm
+- Trustworthy
+- Research-based
+
+Keywords:
+- Language learning ecology
+- Home exposure
+- Literacy
+- Multilingualism
+- Child agency
+
+
+# Design Rules
+
+Always maintain:
+
+- Cream background (#fbf8f1)
+- Dark navy text
+- Gold accent
+- Serif headings
+- Clean spacing
+- Minimal luxury education aesthetic
+
+
+# Technical Rules
+
+## Deployment
+
+Platform:
+Cloudflare Pages
+
+Repository:
+mjviviancambridge-ops/vivianenglish
+
+Main branch:
+main
+
+
+## Important file structure
+
+Vivian English:
+/
+index.html
+
+VELA:
+/
+consultancy/index.html
+
+
+Insights articles:
+/
+insights/
+
+
+# Editing Rules
+
+Before modifying:
+
+1. Check existing structure
+2. Do not replace the whole site unless requested
+3. Preserve existing design system
+4. Modify only necessary files
+
+
+# Navigation Rules
+
+Mobile navigation:
+
+- Must always include hamburger menu
+- Must work under 900px width
+- Never show broken desktop navigation on mobile
+
+
+# Links
+
+Consultation form:
+https://forms.gle/6mwgpTzKQjdiY66T8
+
+
+Research profile:
+https://mjpark.netlify.app/
+
+
+# Coding Style
+
+Prefer:
+- clean HTML
+- embedded CSS if existing
+- minimal JavaScript
+- accessibility-friendly buttons and links
+
+
+# When adding new sections
+
+Use existing patterns:
+
+Section:
+- kicker
+- serif heading
+- explanation text
+- cards/grid if needed
+
+Do not introduce a different visual style.
