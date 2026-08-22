@@ -86,6 +86,14 @@ mjviviancambridge-ops/vivianenglish
 Main branch:
 main
 
+# Deployment Notes
+
+After changes:
+
+- Check mobile layout first
+- Check all navigation links
+- Check Cloudflare Pages deployment
+- Verify production URL before considering the task complete
 
 ## Important file structure
 
@@ -112,6 +120,15 @@ Before modifying:
 3. Preserve existing design system
 4. Modify only necessary files
 
+# File and Routing Safety Rules
+
+Before renaming, deleting, or moving any HTML files:
+
+1. Check existing internal links.
+2. Check Cloudflare Pages routing behaviour.
+3. Preserve existing URL paths whenever possible.
+4. Do not rename index.html files without confirming folder routing.
+5. Avoid creating duplicated folder paths in URLs.
 
 # Navigation Rules
 
