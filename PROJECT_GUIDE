@@ -10,14 +10,9 @@ This repository contains the official websites for:
 - Founder: Vivian Park
 - Cambridge MPhil graduate and PhD researcher in language education
 
-2. VELA Language Learning Lab
-- Evidence-informed language learning consultancy
-- Research-informed parent consultancy
-- Focus:
-  - home language exposure
-  - literacy development
-  - multilingual learning
-  - digital language environments
+2. Vivian English Reading Profile
+- Assessment and progress monitoring within Vivian English Reading & Literacy Lab
+- Parent-facing view of current Reading Stage, strengths and next Reading Goal
 
 
 # Brand Identity
@@ -42,10 +37,10 @@ Avoid:
 - Overly commercial wording
 
 
-## VELA
+## Reading Profile
 
 Positioning:
-"Evidence-informed research & consultancy"
+"Find where your child is. Know what comes next."
 
 Tone:
 - Academic
@@ -54,11 +49,11 @@ Tone:
 - Research-based
 
 Keywords:
-- Language learning ecology
-- Home exposure
-- Literacy
-- Multilingualism
-- Child agency
+- Reading Stage
+- Literacy development
+- Engagement
+- Independence
+- Next Reading Goal
 
 
 # Design Rules
@@ -101,9 +96,9 @@ Vivian English:
 /
 index.html
 
-VELA:
+Reading Profile:
 /
-consultancy/index.html
+reading-profile/index.html
 
 
 Insights articles:
