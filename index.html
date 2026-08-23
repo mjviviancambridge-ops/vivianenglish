@@ -313,6 +313,12 @@ em { color: var(--accent); font-style: italic; }
 .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
 .class-intro-section { padding: 120px 0 0; background: var(--paper); border-top: 1px solid var(--line); }
 .class-intro-section .section-header-row { margin-bottom: 54px; }
+.program-architecture { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); margin-bottom: 72px; }
+.program-layer { min-height: 250px; padding: 26px 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.program-layer.advanced { background: #e8dfd3; }
+.program-layer h3 { margin: 42px 0 14px; font-family: var(--serif); font-size: 27px; font-weight: 400; }
+.program-layer p { margin: 0; color: var(--muted); font-size: 13px; }
+.program-layer a { display: inline-block; margin-top: 18px; font-size: 11px; font-weight: 800; color: var(--accent); }
 .literature-detail { margin-top: 84px; padding: 76px 0 110px; border-top: 1px solid var(--line); }
 .literature-detail-intro { display:grid; grid-template-columns:.82fr 1.18fr; gap:56px; align-items:start; }
 .literature-detail-intro h3 { font-family:var(--serif); font-size:42px; font-weight:400; line-height:1.15; margin:8px 0 20px; }
@@ -375,7 +381,7 @@ em { color: var(--accent); font-style: italic; }
 .contact-row strong { font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
 .contact-row p, .contact-row a { margin:0; color:var(--ink); text-decoration:none; }
 @media (max-width: 980px) { .direct-class-intro, .contact-grid { grid-template-columns:1fr; gap:28px; } .direct-class-grid { grid-template-columns:1fr; } }
-@media (max-width: 620px) { .direct-class-intro h3 { font-size:34px; } .contact-grid h2 { font-size:38px; } .contact-row { grid-template-columns:1fr; gap:6px; } }
+@media (max-width: 620px) { .program-architecture { grid-template-columns:1fr; } .program-layer { min-height:auto; } .program-layer h3 { margin-top:24px; } .direct-class-intro h3 { font-size:34px; } .contact-grid h2 { font-size:38px; } .contact-row { grid-template-columns:1fr; gap:6px; } }
 
 /* Educator development + research activities */
 .educator-section { padding:110px 0; }
@@ -739,6 +745,12 @@ em { color: var(--accent); font-style: italic; }
           <p class="side-copy">
             아이가 현재 어디까지 읽을 수 있고 어디에서 막히는지를 살펴, 읽기 → 이해 → 사고 → 표현의 다음 단계로 이동하도록 돕습니다.
           </p>
+        </div>
+
+        <div class="program-architecture reveal" aria-label="Reading and literacy programme progression">
+          <article class="program-layer"><p class="eyebrow">FOUNDATIONS</p><h3>Sound to Story<br>Reading Foundations</h3><p>Pre-Reading Home Coaching · Phonics &amp; Early Reading</p><a href="/curriculum">Stage 0–1 pathway 보기 →</a></article>
+          <article class="program-layer"><p class="eyebrow">READING &amp; LITERACY</p><h3>Story to Voice<br>Reading Development</h3><p>Reading Coaching · Small Group Reading &amp; Literacy · 1:1 Reading &amp; Literacy</p><a href="/curriculum#stages">Stage 2–6 pathway 보기 →</a></article>
+          <article class="program-layer advanced"><p class="eyebrow">ADVANCED</p><h3>Secondary Literature<br>&amp; Analysis</h3><p>Literary Reading · Close Analysis · Discussion · Analytical Writing</p><a href="/secondary-literature">Advanced pathway 보기 →</a></article>
         </div>
 
         <div id="phonics-study" class="phonics-detail reveal">
