@@ -1,0 +1,20 @@
+/* Shared Vivian English header logo treatment */
+.brand:has(> img),
+.site-header > a:has(> img),
+.header > a:has(> img),
+.topin > a:has(> img) {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+img.brand-logo,
+img.logo[alt="Vivian English"] {
+  display: block;
+  height: auto;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
