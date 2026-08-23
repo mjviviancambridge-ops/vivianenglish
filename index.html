@@ -117,6 +117,11 @@ em { color: var(--accent); font-style: italic; }
 .growth-step strong { display: block; margin-bottom: 18px; }
 .growth-step p { margin: 0; color: var(--muted); font-size: 13px; }
 .growth-line { margin: 30px 0 0; text-align: center; letter-spacing: .12em; font-weight: 700; color: var(--deep); }
+.advanced-extension { margin-top: 38px; padding: 30px; border: 1px solid var(--line); border-left: 3px solid var(--deep); display: grid; grid-template-columns: .7fr 1.3fr; gap: 36px; align-items: center; background: var(--paper-2); }
+.advanced-extension h3 { margin: 6px 0; font-family: var(--serif); font-size: 30px; font-weight: 400; }
+.advanced-extension p { margin: 0; color: var(--muted); }
+.advanced-extension .advanced-flow { margin-top: 14px; font-size: 11px; font-weight: 800; letter-spacing: .08em; color: var(--accent); }
+.advanced-extension .btn { justify-self: start; margin-top: 18px; }
 
 .band { background: var(--deep); color: var(--white); padding: 90px 5vw; text-align: center; }
 .band .eyebrow { color: #d7b99d; }
@@ -230,6 +235,7 @@ em { color: var(--accent); font-style: italic; }
   .portrait-note { margin-right: auto; }
   .split-section, .offer-grid, .research-section, .closing-grid, .section-header-row, .review-heading { grid-template-columns: 1fr; }
   .diagnostic-head, .growth-head { grid-template-columns: 1fr; }
+  .advanced-extension { grid-template-columns: 1fr; }
   .diagnostic-head p:last-child, .growth-head p:last-child { margin-top: 24px; }
   .growth-flow { grid-template-columns: 1fr 1fr; }
   .section-intro { position: static; }
@@ -260,6 +266,7 @@ em { color: var(--accent); font-style: italic; }
   .growth-step:last-child { border-bottom: 0; }
   .growth-step h3 { margin-top: 30px; }
   .growth-step:not(:last-child)::after { content: '↓'; right: 24px; top: auto; bottom: -13px; }
+  .advanced-extension { padding: 24px 20px; gap: 18px; }
   .credentials { grid-template-columns: 1fr; }
   .review-grid { grid-template-columns: 1fr; border-left: 0; }
   .review-card { min-height: 220px; border-left: 1px solid var(--line); }
@@ -579,7 +586,7 @@ em { color: var(--accent); font-style: italic; }
   <main id="top">
     <section class="hero section-shell">
       <div class="hero-copy reveal">
-        <p class="eyebrow">READING &amp; LITERACY EDUCATION</p>
+        <p class="eyebrow">VIVIAN ENGLISH · READING &amp; LITERACY LAB</p>
         <h1>아이의 영어 읽기 실력을<br><em>문해력으로 연결합니다.</em></h1>
         <p class="hero-lede">
           영어를 오래 배웠어도 혼자 책을 읽고, 이해하고, 생각을 표현하는 힘은 저절로 생기지 않습니다.<br>
@@ -634,6 +641,10 @@ em { color: var(--accent); font-style: italic; }
           <article class="growth-step reveal delay-3"><span class="step-no">04 EXPRESS</span><h3>표현하는 힘</h3><strong>Discussion · Response</strong><p>Analytical Writing</p></article>
         </div>
         <p class="growth-line">READ → UNDERSTAND → THINK → EXPRESS</p>
+        <div class="advanced-extension reveal">
+          <div><p class="eyebrow">BEYOND STAGE 6 · ADVANCED LITERATURE</p><h3>Secondary Literature &amp; Analysis</h3><p>Advanced Reading for Secondary Students</p></div>
+          <div><p>Story to Voice Framework 위에서 문학 텍스트를 세밀하게 읽고, 작가의 선택과 더 큰 의미를 분석하며, 자신의 해석을 근거와 함께 논리적으로 발전시킵니다.</p><p class="advanced-flow">INTERPRET → ANALYSE → ARGUE</p><a class="btn secondary" href="/secondary-literature">프로그램 자세히 보기</a></div>
+        </div>
       </div>
     </section>
 
@@ -721,7 +732,7 @@ em { color: var(--accent); font-style: italic; }
             <h2>Reading &amp; Literacy<br>Programs</h2>
             <div class="class-subnav">
               <a href="#phonics-study">Reading Foundations</a>
-              <a href="#british-literature">Reading &amp; Literature</a>
+              <a href="#secondary-literature">Secondary Literature &amp; Analysis</a>
               <a href="#direct-classes">Small Group · 1:1</a>
             </div>
           </div>
@@ -781,15 +792,16 @@ em { color: var(--accent); font-style: italic; }
           <div style="margin-top:30px;"><a class="btn primary" href="https://forms.gle/pxS2JovFXnjpxSCB6" target="_blank" rel="noopener noreferrer">파닉스 스터디 신청하기</a></div>
         </div>
 
-        <div id="british-literature" class="literature-detail reveal">
+        <div id="secondary-literature" class="literature-detail reveal">
           <div class="literature-detail-intro">
             <div>
-              <p class="eyebrow">READING &amp; LITERATURE</p>
-              <h3>Reading &amp; Literature</h3>
+              <p class="eyebrow">ADVANCED LITERATURE</p>
+              <h3>Secondary Literature &amp; Analysis</h3>
+              <p class="small-label">Advanced Reading for Secondary Students</p>
             </div>
             <div>
-              <p><strong>독립 읽기가 가능한 학생들이 원서를 깊이 읽으며 이해·추론·근거 찾기·문학적 사고를 키우는 수업</strong>입니다. 작품은 한 권을 끝내기 위한 목표가 아니라 상위 Reading &amp; Literacy 능력을 발달시키는 텍스트로 사용합니다.</p>
-              <p>학생들은 작품의 배경과 맥락, 인물의 선택, 주제와 상징, 작가의 표현과 문학적 장치를 살펴보고, 근거를 바탕으로 자신의 생각을 영어로 말하고 글로 정리합니다.</p>
+              <p><strong>문학 작품을 읽고 줄거리를 이해하는 데서 한 단계 더 나아가, 인물과 주제, 작가의 선택을 분석하고 자신의 해석을 텍스트 근거와 함께 말과 글로 발전시키는 수업</strong>입니다.</p>
+              <p>Literary Reading · Close Analysis · Discussion · Evidence · Analytical Writing의 흐름으로 Reader에서 Literary Reader로 성장합니다.</p>
             </div>
           </div>
 
@@ -803,7 +815,7 @@ em { color: var(--accent); font-style: italic; }
 
           <div class="lit-grid">
             <article class="lit-card">
-              <h4>왜 영국문학인가요?</h4>
+              <h4>무엇을 배우나요?</h4>
               <ul>
                 <li>줄거리뿐 아니라 작품이 쓰인 배경과 맥락까지 이해합니다.</li>
                 <li>인물, 주제, 상징과 문학기법을 근거를 바탕으로 해석합니다.</li>
@@ -819,10 +831,10 @@ em { color: var(--accent); font-style: italic; }
             <article class="lit-card">
               <h4>추천 대상</h4>
               <ul>
-                <li>단순한 줄거리 이해를 넘어 영국문학을 깊이 읽고 싶은 학생</li>
+                <li>혼자 읽고 기본 내용을 이해하는 것을 넘어 문학 작품을 해석하고 분석할 준비가 된 학생</li>
                 <li>영어로 작품을 읽고 분석하며 자신의 생각을 정리하고 싶은 학생</li>
                 <li>학교 문학 수업이나 원서 기반 수업을 자신 있게 따라가고 싶은 학생</li>
-                <li>Orwell, Dickens 등 영국 작가의 작품과 영국 문화의 맥락을 경험하고 싶은 학생</li>
+                <li>자신의 해석을 discussion과 analytical writing으로 발전시키고 싶은 학생</li>
               </ul>
             </article>
             <article class="lit-card">
@@ -851,6 +863,7 @@ em { color: var(--accent); font-style: italic; }
               </ul>
             </div>
           </div>
+          <div style="margin-top:30px;"><a class="btn secondary" href="/secondary-literature">Secondary Literature &amp; Analysis 자세히 보기</a></div>
         </div>
 
         <div id="direct-classes" class="direct-class-detail reveal">
@@ -932,17 +945,17 @@ em { color: var(--accent); font-style: italic; }
 
           <article class="class-card reveal delay-1">
             <div class="class-card-top">
-              <p class="class-type">BRITISH LITERATURE</p>
+              <p class="class-type">SECONDARY LITERATURE &amp; ANALYSIS</p>
               <span class="status-badge">시간대별 모집</span>
             </div>
-            <h3>영국문학수업</h3>
-            <p class="class-summary">영국문학을 읽고 분석하고 토론하며, 구조화된 글쓰기와 개별 피드백까지 연결하는 소규모 온라인 수업입니다.</p>
+            <h3>Secondary Literature &amp; Analysis</h3>
+            <p class="class-summary">문학 텍스트를 세밀하게 읽고, 작가의 선택과 의미를 분석하며, 자신의 interpretation을 evidence·discussion·analytical writing으로 발전시키는 수업입니다.</p>
             <div class="schedule-list">
               <div class="schedule-row"><p class="time">한국시간 금요일 오후 8시</p><p class="note">대기 · 다음 책 10월 2일 시작</p></div>
               <div class="schedule-row"><p class="time">한국시간 목요일 오후 8시 30분</p><p class="note">모집 대기</p></div>
               <div class="schedule-row"><p class="time">영국시간 금요일 오후 5시</p><p class="note">다음 책 9월 11일 시작</p></div>
             </div>
-            <a class="btn primary" href="https://forms.gle/G83UFioiPgSWLejz8" target="_blank" rel="noopener noreferrer">영국문학수업 신청하기</a>
+            <a class="btn primary" href="https://forms.gle/G83UFioiPgSWLejz8" target="_blank" rel="noopener noreferrer">Secondary Literature 신청하기</a>
           </article>
 
           <article class="class-card reveal">
