@@ -506,6 +506,7 @@ em { color: var(--accent); font-style: italic; }
 .selected-seminars { margin-top:72px; padding-top:54px; border-top:1px solid rgba(34,33,30,.18); scroll-margin-top:100px; }
 .selected-seminars-head { display:grid; grid-template-columns:.75fr 1.25fr; gap:72px; align-items:end; margin-bottom:28px; }
 .selected-seminars-head h3 { margin:0; font-family:var(--serif); font-size:clamp(30px,3.4vw,46px); font-weight:400; line-height:1.12; }
+.selected-seminars-head .seminar-heading-phrase { white-space:nowrap; }
 .selected-seminars-head p:last-child { margin:0; color:var(--muted); line-height:1.8; }
 .selected-seminars-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
 .selected-seminar-card { border:1px solid rgba(34,33,30,.14); background:rgba(255,255,255,.22); padding:28px; min-height:210px; display:flex; flex-direction:column; }
@@ -584,7 +585,16 @@ em { color: var(--accent); font-style: italic; }
     line-height:1.1;
     max-width:680px;
   }
-  .selected-seminars-head h3,
+  .selected-seminars-head{
+    grid-template-columns:.9fr 1.1fr;
+  }
+  .selected-seminars-head h3{
+    font-size:clamp(31px,2.6vw,39px);
+    line-height:1.15;
+    letter-spacing:-.02em;
+    max-width:520px;
+    word-break:keep-all;
+  }
   .home-english-head h3{
     font-size:var(--display-md);
     line-height:1.12;
@@ -1171,7 +1181,7 @@ em { color: var(--accent); font-style: italic; }
           <div class="selected-seminars-head reveal">
             <div>
               <p class="eyebrow">SELECTED SEMINARS</p>
-              <h3>현장의 질문에서 출발한<br><em>강의와 연수.</em></h3>
+              <h3>현장의 <span class="seminar-heading-phrase">질문에서 출발한</span><br><em>강의와 연수.</em></h3>
             </div>
             <p>영어교육자와 교육기관 운영자, 한글학교 교사 등 교육 현장의 다양한 청중을 대상으로 수업 설계와 문해력, 온라인 교육 운영을 주제로 강의해왔습니다.</p>
           </div>
