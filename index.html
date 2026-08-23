@@ -513,6 +513,15 @@ em { color: var(--accent); font-style: italic; }
 .selected-seminar-card .seminar-meta { display:flex; justify-content:space-between; gap:18px; color:var(--muted); font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
 .selected-seminar-card h4 { margin:auto 0 10px; font-family:var(--serif); font-size:27px; font-weight:400; line-height:1.25; }
 .selected-seminar-card p { margin:0; color:var(--muted); font-size:14px; line-height:1.7; }
+.more-talks { margin-top:38px; padding-top:32px; border-top:1px solid rgba(34,33,30,.14); }
+.more-talks-head { display:flex; align-items:baseline; justify-content:space-between; gap:28px; margin-bottom:14px; }
+.more-talks-head h4 { margin:0; font-size:12px; letter-spacing:.14em; font-weight:800; text-transform:uppercase; }
+.more-talks-head p { margin:0; color:var(--muted); font-size:12px; }
+.more-talks-list { border-top:1px solid rgba(34,33,30,.14); }
+.more-talks-item { display:grid; grid-template-columns:72px minmax(230px,.8fr) minmax(0,1.2fr); gap:24px; align-items:center; padding:17px 0; border-bottom:1px solid rgba(34,33,30,.14); }
+.more-talks-year { color:var(--accent); font-family:var(--serif); font-size:18px; }
+.more-talks-audience { color:var(--muted); font-size:12px; letter-spacing:.04em; }
+.more-talks-title { font-size:14px; font-weight:650; line-height:1.45; }
 .seminar-originals { margin-top:28px; display:grid; grid-template-columns:.72fr 1.28fr; gap:34px; align-items:center; padding:30px; border:1px solid rgba(34,33,30,.14); background:rgba(255,255,255,.18); }
 .seminar-originals h4 { margin:7px 0 12px; font-family:var(--serif); font-size:28px; font-weight:400; }
 .seminar-originals p { margin:0; color:var(--muted); font-size:13px; line-height:1.8; }
@@ -526,6 +535,11 @@ em { color: var(--accent); font-style: italic; }
   .selected-seminars{margin-top:58px;padding-top:46px}
   .selected-seminars-grid{grid-template-columns:1fr}
   .selected-seminar-card{min-height:190px;padding:24px}
+  .more-talks{margin-top:30px;padding-top:26px}
+  .more-talks-head{display:block}
+  .more-talks-head p{margin-top:7px}
+  .more-talks-item{grid-template-columns:58px 1fr;gap:5px 14px;padding:16px 0}
+  .more-talks-title{grid-column:2}
   .seminar-originals{padding:20px}
 }
 
@@ -1201,6 +1215,24 @@ em { color: var(--accent); font-style: italic; }
               <h4>Invited Seminar / Professional Development Session for Educators</h4>
               <p>Invited speaker for 성공운, a major Korean educator community for private learning centre owners and teachers (2022). 교육 현장의 경험과 teaching expertise를 나누고 교육자 커뮤니티의 전문적 성장을 지원한 초청 세미나.</p>
             </article>
+            <article class="selected-seminar-card reveal">
+              <div class="seminar-meta"><span>Professional Development Focus</span><span>Educator Workshops</span></div>
+              <h4>Reading, Literacy &amp; Digital Pedagogy</h4>
+              <p>읽기 발달과 문해력 교육, 학습자 참여를 높이는 수업 설계와 디지털 도구 활용을 교육 현장의 실제 질문과 연결하는 전문성 개발 워크숍 주제.</p>
+            </article>
+          </div>
+
+          <div class="more-talks reveal" aria-labelledby="more-talks-title">
+            <div class="more-talks-head">
+              <h4 id="more-talks-title">More Talks &amp; Professional Development</h4>
+              <p>Selected sessions and areas of professional sharing</p>
+            </div>
+            <div class="more-talks-list">
+              <div class="more-talks-item"><span class="more-talks-year">2026</span><span class="more-talks-audience">Korean School Teacher Training · UK</span><span class="more-talks-title">Literacy Education Practice &amp; Reading Workshop</span></div>
+              <div class="more-talks-item"><span class="more-talks-year">2022</span><span class="more-talks-audience">KESA · English Educators</span><span class="more-talks-title">Online Teaching Design &amp; Digital Pedagogy</span></div>
+              <div class="more-talks-item"><span class="more-talks-year">2022</span><span class="more-talks-audience">KESA · Education Practice</span><span class="more-talks-title">Learning Management &amp; Parent Communication</span></div>
+              <div class="more-talks-item"><span class="more-talks-year">2022</span><span class="more-talks-audience">성공운 · Korea</span><span class="more-talks-title">Invited Professional Development Session for Educators</span></div>
+            </div>
           </div>
         </div>
 
