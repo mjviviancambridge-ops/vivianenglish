@@ -100,6 +100,7 @@ em { color: var(--accent); font-style: italic; }
 .note-line { height: 1px; background: var(--accent); margin-top: 14px; }
 
 .diagnostic-section, .growth-section { padding: 120px 0; border-top: 1px solid var(--line); }
+.growth-section { padding-bottom: 84px; }
 .diagnostic-section { background: var(--paper-2); }
 .diagnostic-head, .growth-head { display: grid; grid-template-columns: .9fr 1.1fr; gap: 8vw; align-items: end; }
 .diagnostic-head p:last-child, .growth-head p:last-child { color: var(--muted); margin: 0; max-width: 560px; }
@@ -117,11 +118,6 @@ em { color: var(--accent); font-style: italic; }
 .growth-step strong { display: block; margin-bottom: 18px; }
 .growth-step p { margin: 0; color: var(--muted); font-size: 13px; }
 .growth-line { margin: 30px 0 0; text-align: center; letter-spacing: .12em; font-weight: 700; color: var(--deep); }
-.advanced-extension { margin-top: 38px; padding: 30px; border: 1px solid var(--line); border-left: 3px solid var(--deep); display: grid; grid-template-columns: .7fr 1.3fr; gap: 36px; align-items: center; background: var(--paper-2); }
-.advanced-extension h3 { margin: 6px 0; font-family: var(--serif); font-size: 30px; font-weight: 400; }
-.advanced-extension p { margin: 0; color: var(--muted); }
-.advanced-extension .advanced-flow { margin-top: 14px; font-size: 11px; font-weight: 800; letter-spacing: .08em; color: var(--accent); }
-.advanced-extension .btn { justify-self: start; margin-top: 18px; }
 
 .band { background: var(--deep); color: var(--white); padding: 90px 5vw; text-align: center; }
 .band .eyebrow { color: #d7b99d; }
@@ -235,7 +231,6 @@ em { color: var(--accent); font-style: italic; }
   .portrait-note { margin-right: auto; }
   .split-section, .offer-grid, .research-section, .closing-grid, .section-header-row, .review-heading { grid-template-columns: 1fr; }
   .diagnostic-head, .growth-head { grid-template-columns: 1fr; }
-  .advanced-extension { grid-template-columns: 1fr; }
   .diagnostic-head p:last-child, .growth-head p:last-child { margin-top: 24px; }
   .growth-flow { grid-template-columns: 1fr 1fr; }
   .section-intro { position: static; }
@@ -260,13 +255,13 @@ em { color: var(--accent); font-style: italic; }
   .split-section, #teaching, .research-section { padding-top: 90px; padding-bottom: 90px; }
   .review-section, .insights-section { padding: 90px 0; }
   .diagnostic-section, .growth-section { padding: 90px 0; }
+  .growth-section { padding-bottom: 70px; }
   .diagnostic-grid, .growth-flow { grid-template-columns: 1fr; }
   .diagnostic-card { padding: 22px 20px; }
   .growth-step { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
   .growth-step:last-child { border-bottom: 0; }
   .growth-step h3 { margin-top: 30px; }
   .growth-step:not(:last-child)::after { content: '↓'; right: 24px; top: auto; bottom: -13px; }
-  .advanced-extension { padding: 24px 20px; gap: 18px; }
   .credentials { grid-template-columns: 1fr; }
   .review-grid { grid-template-columns: 1fr; border-left: 0; }
   .review-card { min-height: 220px; border-left: 1px solid var(--line); }
@@ -650,10 +645,6 @@ em { color: var(--accent); font-style: italic; }
           <article class="growth-step reveal delay-3"><span class="step-no">04 EXPRESS</span><h3>표현하는 힘</h3><strong>Discussion · Response</strong><p>Analytical Writing</p></article>
         </div>
         <p class="growth-line">READ → UNDERSTAND → THINK → EXPRESS</p>
-        <div class="advanced-extension reveal">
-          <div><p class="eyebrow">BEYOND STAGE 6 · ADVANCED LITERATURE</p><h3>Secondary Literature &amp; Analysis</h3><p>Advanced Reading for Secondary Students</p></div>
-          <div><p>Story to Voice Framework 위에서 문학 텍스트를 세밀하게 읽고, 작가의 선택과 더 큰 의미를 분석하며, 자신의 해석을 근거와 함께 논리적으로 발전시킵니다.</p><p class="advanced-flow">INTERPRET → ANALYSE → ARGUE</p><a class="btn secondary" href="/secondary-literature">프로그램 자세히 보기</a></div>
-        </div>
       </div>
     </section>
 
